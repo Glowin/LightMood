@@ -13,6 +13,7 @@
         class="preset-btn {{currentPreset === index ? 'active' : ''}}"
         data-preset="{{index}}"
         bindtap="selectPreset"
+        style="background-color: hsla({{item.hue}}, {{item.saturation}}%, {{item.lightness}}%, 0.7); border-color: hsla({{item.hue}}, {{item.saturation}}%, {{item.lightness}}%, 0.9);"
       >
         {{item.name}}
       </view>
