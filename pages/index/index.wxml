@@ -29,9 +29,9 @@
           max="360" 
           value="{{hue}}" 
           block-size="20" 
-          activeColor="#f5a623" 
-          backgroundColor="rgba(255, 255, 255, 0.3)"
+          block-color="#ffffff"
           bindchange="onHueChange"
+          class="hue-slider"
         />
       </view>
       

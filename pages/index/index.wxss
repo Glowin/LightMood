@@ -121,6 +121,29 @@ slider {
   box-sizing: border-box;
 }
 
+/* 色相滑块彩虹背景 */
+.hue-slider {
+  position: relative;
+  background: linear-gradient(to right, 
+    #FF0000, /* 0° - 红 */
+    #FFFF00, /* 60° - 黄 */
+    #00FF00, /* 120° - 绿 */
+    #00FFFF, /* 180° - 青 */
+    #0000FF, /* 240° - 蓝 */
+    #FF00FF, /* 300° - 紫 */
+    #FF0000  /* 360° - 红 */
+  ) !important;
+  border-radius: 10rpx;
+  height: 8rpx !important;
+}
+
+/* 色相滑块滑块样式 */
+.hue-slider .wx-slider-handle {
+  background-color: #ffffff;
+  box-shadow: 0 0 5rpx rgba(0, 0, 0, 0.5);
+  border: 2rpx solid #ffffff;
+}
+
 .slider-container {
   width: 100%;
   box-sizing: border-box;
