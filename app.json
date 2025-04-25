@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "光影派 LightMood",
+    "navigationBarTextStyle": "white",
+    "disableScroll": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

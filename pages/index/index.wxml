@@ -1,0 +1,86 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- 全屏颜色背景 -->
+  <canvas canvas-id="colorCanvas" class="color-canvas" style="width: {{canvasWidth}}px; height: {{canvasHeight}}px;"></canvas>
+  
+  <!-- 控制面板 -->
+  <view class="control-panel {{panelVisible ? 'visible' : 'hidden'}}">
+    <!-- 预设颜色选择 -->
+    <view class="preset-container">
+      <view 
+        wx:for="{{presets}}" 
+        wx:key="index" 
+        class="preset-btn {{currentPreset === index ? 'active' : ''}}"
+        data-preset="{{index}}"
+        bindtap="selectPreset"
+        style="background-color: {{index === 'default' ? '#FFFFFF' : ''}};"
+      >
+        {{item.name}}
+      </view>
+    </view>
+    
+    <!-- 颜色调节滑块 -->
+    <view class="slider-section">
+      <!-- 色相调节 -->
+      <view class="slider-container">
+        <view class="slider-label">色相 ({{hue}})</view>
+        <slider 
+          min="0" 
+          max="360" 
+          value="{{hue}}" 
+          block-size="20" 
+          activeColor="#f5a623" 
+          backgroundColor="rgba(255, 255, 255, 0.3)"
+          bindchange="onHueChange"
+        />
+      </view>
+      
+      <!-- 饱和度调节 -->
+      <view class="slider-container">
+        <view class="slider-label">饱和度 ({{saturation}}%)</view>
+        <slider 
+          min="0" 
+          max="100" 
+          value="{{saturation}}" 
+          block-size="20" 
+          activeColor="#f5a623" 
+          backgroundColor="rgba(255, 255, 255, 0.3)"
+          bindchange="onSaturationChange"
+        />
+      </view>
+      
+      <!-- 亮度调节 -->
+      <view class="slider-container">
+        <view class="slider-label">亮度 ({{lightness}}%)</view>
+        <slider 
+          min="0" 
+          max="100" 
+          value="{{lightness}}" 
+          block-size="20" 
+          activeColor="#f5a623" 
+          backgroundColor="rgba(255, 255, 255, 0.3)"
+          bindchange="onLightnessChange"
+        />
+      </view>
+      
+      <!-- 屏幕亮度调节 -->
+      <view class="slider-container">
+        <view class="slider-label">屏幕亮度 ({{brightness}}%)</view>
+        <slider 
+          min="0" 
+          max="100" 
+          value="{{brightness}}" 
+          block-size="20" 
+          activeColor="#f5a623" 
+          backgroundColor="rgba(255, 255, 255, 0.3)"
+          bindchange="onBrightnessChange"
+        />
+      </view>
+    </view>
+  </view>
+  
+  <!-- 控制面板切换按钮 -->
+  <view class="panel-toggle" bindtap="togglePanel">
+    <view class="toggle-icon {{panelVisible ? 'up' : 'down'}}"></view>
+  </view>
+</view>
