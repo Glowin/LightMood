@@ -53,7 +53,7 @@
 
 /* 预设颜色按钮 */
 .preset-btn {
-  width: 22%;
+  width: 30%;
   padding: 15rpx 0;
   margin-bottom: 20rpx;
   text-align: center;

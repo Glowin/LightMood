@@ -23,12 +23,12 @@ App({
   
   globalData: {
     systemInfo: null,
-    // 默认颜色设置
+    // 默认颜色设置 - 改为少女感预设
     currentSettings: {
-      preset: 'default',
-      hue: 0,        // 0-360
+      preset: 'pink',
+      hue: 350,        // 0-360
       saturation: 100, // 0-100
-      lightness: 50,  // 0-100
+      lightness: 80,  // 0-100
       brightness: 100 // 0-100 (屏幕亮度)
     },
     // 预设颜色配置

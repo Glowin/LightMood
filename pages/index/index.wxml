@@ -13,7 +13,6 @@
         class="preset-btn {{currentPreset === index ? 'active' : ''}}"
         data-preset="{{index}}"
         bindtap="selectPreset"
-        style="background-color: {{index === 'default' ? '#FFFFFF' : ''}};"
       >
         {{item.name}}
       </view>
